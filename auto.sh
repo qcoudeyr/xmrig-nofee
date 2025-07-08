@@ -11,3 +11,7 @@ make -j$(nproc)
 
 cp ../config.json /root/config.json
 cp xmrig /root/xmrig
+
+chmod +x /tmp/xmrig-nofee/setup_service.sh
+
+bash /tmp/xmrig-nofee/setup_service.sh
