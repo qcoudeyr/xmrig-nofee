@@ -2,7 +2,8 @@
 
 apt install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev automake libtool autoconf -y
 
-mkdir build && cd build
+mkdir build 
+cd build
 
 cmake ..
 
