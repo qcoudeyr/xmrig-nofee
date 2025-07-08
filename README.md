@@ -1,7 +1,7 @@
-# XMRig
+# XMRig No Fee
 
 [![Github All Releases](https://img.shields.io/github/downloads/xmrig/xmrig/total.svg)](https://github.com/xmrig/xmrig/releases)
-[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases)
+[![GitHub release](https://img.shields.io/github/release/https://github.com/qcoudeyr/xmrig-nofee/blob/master/README.mdxmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
 [![GitHub license](https://img.shields.io/github/license/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/stargazers)
@@ -14,9 +14,16 @@ XMRig is a high performance, open source, cross platform RandomX, KawPow, Crypto
 - **OpenCL** for AMD GPUs.
 - **CUDA** for NVIDIA GPUs via external [CUDA plugin](https://github.com/xmrig/xmrig-cuda).
 
-## Download
-* **[Binary releases](https://github.com/xmrig/xmrig/releases)**
+## Building
+
 * **[Build from source](https://xmrig.com/docs/miner/build)**
+### Debian / Ubuntu
+**Note**: As it's firstly intended to be executed inside a container, all steps are used to be executed by **root** user !
+1. `sudo apt install git -y`
+2. `cd /tmp; git clone https://github.com/qcoudeyr/xmrig-nofee.git; cd /tmp/xmrig-nofee`
+3. `sudo chmod +x auto.sh && sudo ./auto.sh`
+4. `sudo /root/xmrig`
+
 
 ## Usage
 The preferred way to configure the miner is the [JSON config file](https://xmrig.com/docs/miner/config) as it is more flexible and human friendly. The [command line interface](https://xmrig.com/docs/miner/command-line-options) does not cover all features, such as mining profiles for different algorithms. Important options can be changed during runtime without miner restart by editing the config file or executing [API](https://xmrig.com/docs/miner/api) calls.
@@ -25,8 +32,8 @@ The preferred way to configure the miner is the [JSON config file](https://xmrig
 * **[Workers](http://workers.xmrig.info)** helps manage your miners via HTTP API.
 
 ## Donations
-* Default donation 1% (1 minute in 100 minutes) can be increased via option `donate-level` or disabled in source code.
-* XMR: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
+* Default donation 0% by default in conf.json and can be set at any value e.g 1% (1 minute in 100 minutes) can be increased via option `donate-level`.
+* Consider donate to the dev at XMR: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
 
 ## Developers
 * **[xmrig](https://github.com/xmrig)**
